@@ -84,8 +84,8 @@ class BlockSeatsView(APIView):
         if not token:
            return HttpResponse(json.dumps({"error": "Please login"}),content_type="application/json",status=403)
         params = {
-            "bus_name":"Bus 1",
-            "no_passengers":2
+            "bus_name":bus_name,
+            "no_passengers":no_passengers
             }
         headers = {
             "Authorization": f"Bearer {token}",
